@@ -67,5 +67,7 @@ router.put('/quizzes/:quizId(\\d+)/comments/:commentId(\\d+)/accept',
 	                                               sessionController.loginRequired, 
 	                                               quizController.ownershipRequired, 
 	                                               commentController.accept);
+// Definición de ruta de autores
+router.get('/author', quizController.author);
 
 module.exports = router;
